@@ -1,0 +1,45 @@
+
+.index-title{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    color: yellow;
+    font-size: 50px;
+    background-color: #3b3b3b;
+}
+
+.card-container{
+    display: flex;
+    gap: 90px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: #272727;
+
+}
+
+main{
+    background-color: yellow;
+}
+
+nav{
+    color: aqua;
+    background-color: aqua;
+    padding: 70px;
+}
+
+.botonAgregarCarrito{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    background-color: #3b3b3b;
+}
+
+
+
+
+
+
+
+

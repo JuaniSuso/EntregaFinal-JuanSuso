@@ -1,17 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>inicio</title>
-    <script src="JS/main.js"></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio - Tienda Digital</title>
 
+    <link rel="stylesheet" href="styles/index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
     <header>
-
-        <h1>hola</h1>
+      <div class="navBar">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
     </header>
-    
-</body>
+
+    <main>
+      <section class="index-content">
+        <h1 class="index-title">Bienvenido a nuestra tienda</h1>
+      </section>
+
+      <!--CONTENEDORES DE OBJETOS-->
+
+      <div class="card-container" id="listaProductos">
+        <div class="card" style="width: 18rem">
+          <img src="assets/monitor.webp" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h2 class="card-text">Monitores</h2>
+            <p>Precio: $80.000</p>
+            <button
+              class="btn btn-primary btn-comprar"
+              data-producto="Monitores"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="assets/ram.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h2 class="card-text">Memorias Ram.</h2>
+            <p>Precio: $32.000</p>
+            <button
+              class="btn btn-primary btn-comprar"
+              data-producto="Memorias Ram"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="assets/graficas.webp" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h2 class="card-text">Tarjetas Gráficas.</h2>
+            <p>Precio: $150.000</p>
+            <button
+              class="btn btn-primary btn-comprar"
+              data-producto="Graficas"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="assets/procesadores.jpeg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h2 class="card-text">Procesadores</h2>
+            <p>Precio: $140.000</p>
+            <button
+              class="btn btn-primary btn-comprar"
+              data-producto="Procesadores"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+
+        <!--BOTON PARA VER EL CARRITO-->
+      </div>
+
+      <div class="botonAgregarCarrito">
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#carritoModal"
+        >
+          Ver carrito
+        </button>
+      </div>
+
+      <!--MODAL-->
+
+      <div
+        class="modal fade"
+        id="carritoModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Carrito de Compra
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-bs-dismiss="modal"
+                aria-label="Cerrar"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <ul id="carritoProductos"></ul>
+              <hr />
+              <p>Total a Pagar: $<span id="montoFinal">0.00</span></p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                id="finalizarCompra"
+              >
+                Finalizar Compra
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer></footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="JS/index.js"></script>
+  </body>
 </html>
