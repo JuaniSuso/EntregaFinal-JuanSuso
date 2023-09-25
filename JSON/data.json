@@ -1,0 +1,7 @@
+[
+    { "nombre": "Monitores", "precio": 80000 },
+    { "nombre": "Memorias Ram", "precio": 32000 },
+    { "nombre": "Graficas", "precio": 150000 },
+    { "nombre": "Procesadores", "precio": 140000 }
+  ]
+  

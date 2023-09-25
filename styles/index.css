@@ -23,11 +23,7 @@ main{
     background-color: yellow;
 }
 
-nav{
-    color: aqua;
-    background-color: aqua;
-    padding: 70px;
-}
+
 
 .botonAgregarCarrito{
     display: flex;
